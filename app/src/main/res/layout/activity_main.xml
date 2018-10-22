@@ -23,6 +23,7 @@
 
 
             <widget.PortraitView
+                android:tint="@color/text_nav"
                 android:id="@+id/im_portrait"
                 android:layout_width="@dimen/len_40"
                 android:layout_height="@dimen/len_40"
@@ -60,6 +61,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <FrameLayout
+
         android:id="@+id/lay_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -69,6 +71,7 @@
     </FrameLayout>
 
     <net.qiujuer.genius.ui.widget.FloatActionButton
+        android:translationY="@dimen/len_80"
         android:id="@+id/btn_action"
         android:layout_width="@dimen/len_52"
         android:layout_height="@dimen/len_52"
@@ -86,7 +89,15 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/len_52"
         android:layout_gravity="bottom"
-        android:background="@color/grey_200">
+        android:background="@color/white"
+        android:elevation="@dimen/len_4"
+        android:outlineProvider="bounds"
+        tools:targetApi="lollipop"
+        android:translationZ="@dimen/len_8"
+        app:menu="@menu/navigation_items"
+        app:itemIconTint="@color/text_nav"
+        app:itemTextColor="@color/text_nav"
+        >
 
     </android.support.design.widget.BottomNavigationView>
 
