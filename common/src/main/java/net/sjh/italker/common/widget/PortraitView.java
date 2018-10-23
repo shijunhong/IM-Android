@@ -1,4 +1,4 @@
-package widget;
+package net.sjh.italker.common.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

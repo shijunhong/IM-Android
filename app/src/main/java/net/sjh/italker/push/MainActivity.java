@@ -24,7 +24,7 @@ import net.sjh.italker.push.helper.NavHelper;
 import java.util.Objects;
 import butterknife.BindView;
 import butterknife.OnClick;
-import widget.PortraitView;
+import net.sjh.italker.common.widget.PortraitView;
 
 
 public class MainActivity extends Activity

@@ -1,6 +1,4 @@
-package widget.recycler;
-
-import android.support.v7.widget.RecyclerView;
+package net.sjh.italker.common.widget.recycler;
 
 /**
  * @author shijunhong
