@@ -17,6 +17,7 @@ import com.bumptech.glide.request.target.ViewTarget;
 import net.qiujuer.genius.ui.Ui;
 import net.qiujuer.genius.ui.widget.FloatActionButton;
 import net.sjh.italker.common.app.Activity;
+import net.sjh.italker.push.activities.AccountActivity;
 import net.sjh.italker.push.frags.main.ActiveFragment;
 import net.sjh.italker.push.frags.main.ContactFragment;
 import net.sjh.italker.push.frags.main.GroupFragment;
@@ -86,6 +87,12 @@ public class MainActivity extends Activity
     void onSearchMenuClick() {
 
     }
+
+    @OnClick(R.id.btn_action)
+    void onActionClick(){
+        AccountActivity.show(this);
+    }
+
 
 
     /**
