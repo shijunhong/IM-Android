@@ -35,7 +35,7 @@ public class GalleryFragment extends BottomSheetDialogFragment implements Galley
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-
+        //返回一个我们复写的
         return new TransStatusBottomSheetDialog(getContext());
     }
 
@@ -86,7 +86,8 @@ public class GalleryFragment extends BottomSheetDialogFragment implements Galley
     }
 
 
-    private static class TransStatusBottomSheetDialog extends BottomSheetDialog{
+    //为了解决顶部状态栏变黑而做的处理
+    public static class TransStatusBottomSheetDialog extends BottomSheetDialog{
 
         public TransStatusBottomSheetDialog(@NonNull Context context) {
             super(context);

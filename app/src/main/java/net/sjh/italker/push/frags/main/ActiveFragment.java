@@ -16,8 +16,8 @@ import butterknife.BindView;
  * A simple {@link Fragment} subclass.
  */
 public class ActiveFragment extends Fragment {
-    @BindView(R.id.galleyView)
-    GalleyView mGalley;
+//    @BindView(R.id.galleyView)
+//    GalleyView mGalley;
 
     public ActiveFragment() {
         // Required empty public constructor
@@ -31,11 +31,11 @@ public class ActiveFragment extends Fragment {
     @Override
     protected void initData() {
         super.initData();
-        mGalley.setUp(getLoaderManager(), new GalleyView.SelectedChangeListener() {
-            @Override
-            public void onSelectedCountChanges(int count) {
-
-            }
-        });
+//        mGalley.setUp(getLoaderManager(), new GalleyView.SelectedChangeListener() {
+//            @Override
+//            public void onSelectedCountChanges(int count) {
+//
+//            }
+//        });
     }
 }

@@ -1,6 +1,8 @@
-package net.sjh.italker.push;
+package net.sjh.italker.push.activities;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.view.Menu;
@@ -17,7 +19,9 @@ import com.bumptech.glide.request.target.ViewTarget;
 import net.qiujuer.genius.ui.Ui;
 import net.qiujuer.genius.ui.widget.FloatActionButton;
 import net.sjh.italker.common.app.Activity;
+import net.sjh.italker.push.R;
 import net.sjh.italker.push.activities.AccountActivity;
+import net.sjh.italker.push.assist.PermissionsFragment;
 import net.sjh.italker.push.frags.main.ActiveFragment;
 import net.sjh.italker.push.frags.main.ContactFragment;
 import net.sjh.italker.push.frags.main.GroupFragment;
@@ -45,6 +49,10 @@ public class MainActivity extends Activity
     BottomNavigationView mNavigation;
     private NavHelper<Integer> mNavHelper;
 
+    //mainactivity显示的入口
+    public static void show(Context context){
+        context.startActivity(new Intent(context,MainActivity.class));
+    }
     @Override
     protected int getContentLayoutId() {
         return R.layout.activity_main;
@@ -72,6 +80,8 @@ public class MainActivity extends Activity
                         this.view.setBackground(resource.getCurrent());
                     }
                 });
+
+
     }
 
     @Override

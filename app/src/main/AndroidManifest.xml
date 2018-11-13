@@ -17,8 +17,6 @@
     <!-- 录音权限 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-
-
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -28,23 +26,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Main">
+            android:name=".LaunchActivity"
+            android:theme="@style/AppTheme.Main"
+            android:label="@string/title_activity_launch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activities.AccountActivity"
-            android:theme="@style/AppTheme.Account"
-            android:screenOrientation="portrait"></activity>
-
-        <activity android:name="com.yalantis.ucrop.UCropActivity"
+        <activity
+            android:name=".activities.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme.Main">
+        </activity>
+        <activity
+            android:name=".activities.AccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Account" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
 
     </application>
 

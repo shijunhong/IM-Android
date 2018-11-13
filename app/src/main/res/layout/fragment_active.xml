@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".frags.main.ActiveFragment">
 
-   <net.sjh.italker.common.widget.GalleyView
-       android:id="@+id/galleyView"
-       android:padding="1dp"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+   <!--<net.sjh.italker.common.widget.GalleyView-->
+       <!--android:id="@+id/galleyView"-->
+       <!--android:padding="1dp"-->
+       <!--android:layout_width="match_parent"-->
+       <!--android:layout_height="match_parent">-->
 
-   </net.sjh.italker.common.widget.GalleyView>
+   <!--</net.sjh.italker.common.widget.GalleyView>-->
 
 </FrameLayout>
