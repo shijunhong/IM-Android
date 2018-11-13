@@ -48,6 +48,16 @@ public class Application extends android.app.Application {
     }
 
     /**
+     * 外部获取单例
+     *
+     * @return Application
+     */
+    public static Application getInstance() {
+        return instance;
+    }
+
+
+    /**
      * 获取声音文件的本地地址
      *
      * @param isTmp 是否是缓存文件， True，每次返回的文件地址是一样的

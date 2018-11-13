@@ -4,6 +4,7 @@ package net.sjh.italker.push.frags.account;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.util.Log;
 
 import com.bumptech.glide.Glide;
 import com.yalantis.ucrop.UCrop;
@@ -11,6 +12,8 @@ import com.yalantis.ucrop.UCrop;
 import net.sjh.italker.common.app.Application;
 import net.sjh.italker.common.app.Fragment;
 import net.sjh.italker.common.widget.PortraitView;
+import net.sjh.italker.factory.Factory;
+import net.sjh.italker.factory.net.UploadHelper;
 import net.sjh.italker.push.R;
 import net.sjh.italker.push.frags.media.GalleryFragment;
 
@@ -69,12 +72,21 @@ public class UpdateInfoFragment extends Fragment {
         }
     }
 
-    private void loadPortrait(Uri uri){
+    private void loadPortrait(final Uri uri){
         Glide.with(this)
                 .load(uri)
                 .asBitmap()
                 .centerCrop()
                 .into(mPortrait);
+        final String path = uri.getPath();
+
+        Factory.runOnAsync(new Runnable() {
+            @Override
+            public void run() {
+               String url =  UploadHelper.uploadPortrait(path);
+                Log.e("TAG","URL:"+url);
+            }
+        });
     }
 
 
